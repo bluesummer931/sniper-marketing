@@ -233,7 +233,7 @@ st.markdown('<p class="subheader">Turn Reddit Pain Points Into Precision Ad Camp
 
 # Sidebar - The IKEA Effect Input
 with st.sidebar:
-    st.image("https://via.placeholder.com/300x100/7b2cbf/ffffff?text=SNIPER+MARKETING", use_container_width=True)
+    st.markdown("# 🎯 SNIPER MARKETING")
     st.markdown("## 🎯 Campaign Setup")
     st.markdown("---")
     
