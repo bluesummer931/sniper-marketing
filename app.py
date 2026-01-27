@@ -355,7 +355,40 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
             default=["Reddit Ads"]
         )
 
-# Safety Shield UI
+# Welcome Screen - Show only if no pain points generated yet
+if not st.session_state.pain_points:
+    st.info("👈 **Get started:** Enter your Product Niche and Target Audience in the sidebar, then click 'Find Pain Points'")
+    
+    # Show demo metrics
+    st.markdown("## 🔥 Why Sniper Marketing?")
+    
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Avg ROI", "342%", "+89%")
+    with col2:
+        st.metric("Cost Savings", "67%", "+12%")
+    with col3:
+        st.metric("Time Saved", "23hrs/mo", "+8hrs")
+    with col4:
+        st.metric("Campaigns", "2.4K+", "+340")
+    
+    st.markdown("---")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("### 🎯 Precision Targeting")
+        st.markdown("Stop wasting budget on broad audiences. Find exact pain points your audience is discussing right now.")
+    
+    with col2:
+        st.markdown("### 🛡️ Built-in Safety")
+        st.markdown("Set kill switches and budget limits. Never overspend or underperform without knowing immediately.")
+    
+    with col3:
+        st.markdown("### ⚡ Lightning Fast")
+        st.markdown("From pain point discovery to live ad in under 5 minutes. No more weeks of research and testing.")
+
+# Safety Shield UI - Always shows at bottom
 st.markdown("---")
 st.markdown("## 🛡️ Safety Shield - Budget Dashboard")
 
@@ -391,7 +424,7 @@ with st.expander("⚙️ Advanced Safety Controls"):
         st.number_input("Monthly Cap ($)", min_value=100, value=3000, step=100)
         st.checkbox("Auto-optimize bids", value=True)
 
-# Feedback & Waitlist
+# Feedback & Waitlist - Always shows at bottom
 st.markdown("---")
 st.markdown("## 🚀 Join the Revolution")
 
@@ -414,7 +447,7 @@ with col2:
         else:
             st.error("Please enter a valid email")
 
-# Footer
+# Footer - Always shows at bottom
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #606060; padding: 2rem 0;">
@@ -422,36 +455,3 @@ st.markdown("""
     <p style="font-size: 0.9rem;">Stop spraying ads everywhere. Start sniping pain points.</p>
 </div>
 """, unsafe_allow_html=True)
-
-# Else: Show welcome screen
-else:
-    st.info("👈 **Get started:** Enter your Product Niche and Target Audience in the sidebar, then click 'Find Pain Points'")
-    
-    # Show demo metrics
-    st.markdown("## 🔥 Why Sniper Marketing?")
-    
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.metric("Avg ROI", "342%", "+89%")
-    with col2:
-        st.metric("Cost Savings", "67%", "+12%")
-    with col3:
-        st.metric("Time Saved", "23hrs/mo", "+8hrs")
-    with col4:
-        st.metric("Campaigns", "2.4K+", "+340")
-    
-    st.markdown("---")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        st.markdown("### 🎯 Precision Targeting")
-        st.markdown("Stop wasting budget on broad audiences. Find exact pain points your audience is discussing right now.")
-    
-    with col2:
-        st.markdown("### 🛡️ Built-in Safety")
-        st.markdown("Set kill switches and budget limits. Never overspend or underperform without knowing immediately.")
-    
-    with col3:
-        st.markdown("### ⚡ Lightning Fast")
-        st.markdown("From pain point discovery to live ad in under 5 minutes. No more weeks of research and testing.")
