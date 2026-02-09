@@ -82,19 +82,19 @@ def generate_pain_points(niche, audience):
     pain_point_database = {
         "coffee": [
             {
-                "title": "☕ Coffee Stains Ruining My Smile",
+                "title": "🦷 Coffee Stains Ruining My Smile",
                 "description": "Frustrated coffee drinkers complaining about teeth staining despite loving their daily brew",
                 "sentiment": "High Frustration",
                 "mentions": 1247
             },
             {
-                "title": "😤 Bitterness Overload Every Morning",
+                "title": "😠 Bitterness Overload Every Morning",
                 "description": "Users struggling with overly bitter coffee that ruins their morning routine",
                 "sentiment": "Medium Frustration",
                 "mentions": 892
             },
             {
-                "title": "💸 Expensive Coffee Addiction",
+                "title": "💰 Expensive Coffee Addiction",
                 "description": "People shocked by how much they spend on coffee shops monthly",
                 "sentiment": "High Concern",
                 "mentions": 2103
@@ -108,7 +108,7 @@ def generate_pain_points(niche, audience):
                 "mentions": 3421
             },
             {
-                "title": "😓 Plateaued Progress",
+                "title": "😰 Plateaued Progress",
                 "description": "Fitness enthusiasts stuck at the same weight/strength level for months",
                 "sentiment": "Demotivation",
                 "mentions": 1876
@@ -175,32 +175,32 @@ def generate_sniper_ad(pain_point, niche, audience):
         "stain": {
             "headline": "Finally: Coffee Without the Stains ☕",
             "body": f"Tired of yellow teeth ruining your confidence? Our {niche} solution lets you enjoy your daily brew without the guilt. {audience} are already making the switch.",
-            "cta": "Get Stain-Free Coffee →"
+            "cta": "Get Stain-Free Coffee"
         },
         "bitter": {
             "headline": "Say Goodbye to Bitter Mornings 🌅",
             "body": f"Stop forcing down bitter {niche}. Our smooth blend is scientifically engineered for taste, not just caffeine. Join 10,000+ {audience} who love their mornings again.",
-            "cta": "Try Smooth Coffee →"
+            "cta": "Try Smooth Coffee"
         },
         "expensive": {
             "headline": "$5/Day? That's $1,825/Year on Coffee 💸",
             "body": f"Stop hemorrhaging money at coffee shops. Our premium {niche} costs just $0.50/cup. Perfect for {audience} who love quality but hate waste.",
-            "cta": "Calculate Your Savings →"
+            "cta": "Calculate Your Savings"
         },
         "time": {
             "headline": f"Get Results in 15 Minutes/Day ⏰",
             "body": f"No time for {niche}? Wrong. Our system is designed for busy {audience}. Quick, effective, and proven to work.",
-            "cta": "Start 15-Min Challenge →"
+            "cta": "Start 15-Min Challenge"
         },
         "plateau": {
             "headline": "Stuck? Here's Why (And How to Fix It) 📈",
             "body": f"That plateau isn't your fault. 94% of {audience} make the same 3 mistakes. Our {niche} program breaks through in weeks, not months.",
-            "cta": "Break Your Plateau →"
+            "cta": "Break Your Plateau"
         },
         "default": {
             "headline": f"Built for {audience} Who Want Real Results 🎯",
             "body": f"Stop wasting time on generic {niche} solutions. We analyzed 10,000+ {audience} to create something that actually works for YOUR specific needs.",
-            "cta": f"See How It Works →"
+            "cta": f"See How It Works"
         }
     }
     
@@ -321,15 +321,14 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
         </div>
         """, unsafe_allow_html=True)
         
-        # Real clickable CTA button - centered and prominent
-        col_left, col_center, col_right = st.columns([1, 2, 1])
-        with col_center:
-            st.link_button(
-                label=ad['cta'],
-                url="https://forms.google.com",
-                use_container_width=True,
-                type="primary"
-            )
+        # Real clickable CTA button - SMOKE TEST: Collects interest via Telegram
+        st.link_button(
+            label=f"🚀 {ad['cta']}",
+            url="https://forms.google.com/your-form-id",  # Replace with your actual Google Form or Telegram link
+            use_container_width=True,
+            type="primary"
+        )
+        st.caption("👆 Click to join early access waitlist")
         
         with st.expander("📈 Ad Performance Prediction"):
             metric_cols = st.columns(4)
