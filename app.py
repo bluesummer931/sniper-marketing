@@ -229,7 +229,6 @@ if 'generated_ad' not in st.session_state:
 
 # Main header
 st.markdown('<h1 class="main-header">🎯 Sniper Marketing Co-Pilot</h1>', unsafe_allow_html=True)
-st.markdown('<p class="subheader">Turn Reddit Pain Points Into Precision Ad Campaigns</p>', unsafe_allow_html=True)
 
 # Sidebar - The IKEA Effect Input
 with st.sidebar:
@@ -357,7 +356,7 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
         st.markdown("### 📱 Platforms")
         platforms = st.multiselect(
             "Deploy to:",
-            ["Facebook Ads", "Google Ads", "Reddit Ads", "LinkedIn Ads"],
+            ["Facebook Ads", "Google Ads", "Reddit Ads", "LinkedIn Ads", "Instagram Ads", "TikTok Ads"],
             default=["Reddit Ads"]
         )
 
@@ -387,7 +386,7 @@ if not st.session_state.pain_points:
         st.markdown("Stop wasting budget on broad audiences. Find exact pain points your audience is discussing right now.")
     
     with col2:
-        st.markdown("### 🛡️ Built-in Safety")
+        st.markdown("### 🔒 Built-in Safety")
         st.markdown("Set kill switches and budget limits. Never overspend or underperform without knowing immediately.")
     
     with col3:
@@ -396,7 +395,7 @@ if not st.session_state.pain_points:
 
 # Safety Shield UI - Always shows at bottom
 st.markdown("---")
-st.markdown("## 🛡️ Safety Shield - Budget Dashboard")
+st.markdown("## 🔒 Safety Shield - Budget Dashboard")
 
 col1, col2, col3 = st.columns(3)
 
