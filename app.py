@@ -315,14 +315,21 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
         st.markdown(f"""
         <div class="ad-preview">
             <h2 style="color: #00d4ff; margin-bottom: 1rem;">{ad['headline']}</h2>
-            <p style="font-size: 1.1rem; color: #e0e0e0; line-height: 1.6; margin-bottom: 2rem;">
+            <p style="font-size: 1.1rem; color: #e0e0e0; line-height: 1.6; margin-bottom: 1.5rem;">
                 {ad['body']}
             </p>
-            <div class="cta-button">
-                {ad['cta']}
-            </div>
         </div>
         """, unsafe_allow_html=True)
+        
+        # Real clickable CTA button - centered and prominent
+        col_left, col_center, col_right = st.columns([1, 2, 1])
+        with col_center:
+            st.link_button(
+                label=ad['cta'],
+                url="https://forms.google.com",
+                use_container_width=True,
+                type="primary"
+            )
         
         with st.expander("📈 Ad Performance Prediction"):
             metric_cols = st.columns(4)
