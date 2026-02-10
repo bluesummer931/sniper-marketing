@@ -82,19 +82,19 @@ def generate_pain_points(niche, audience):
     pain_point_database = {
         "coffee": [
             {
-                "title": "🦷 Coffee Stains Ruining My Smile",
+                "title": "Coffee Stains Ruining My Smile",
                 "description": "Frustrated coffee drinkers complaining about teeth staining despite loving their daily brew",
                 "sentiment": "High Frustration",
                 "mentions": 1247
             },
             {
-                "title": "😠 Bitterness Overload Every Morning",
+                "title": "Bitterness Overload Every Morning",
                 "description": "Users struggling with overly bitter coffee that ruins their morning routine",
                 "sentiment": "Medium Frustration",
                 "mentions": 892
             },
             {
-                "title": "💰 Expensive Coffee Addiction",
+                "title": "Expensive Coffee Addiction",
                 "description": "People shocked by how much they spend on coffee shops monthly",
                 "sentiment": "High Concern",
                 "mentions": 2103
@@ -102,19 +102,19 @@ def generate_pain_points(niche, audience):
         ],
         "fitness": [
             {
-                "title": "💪 No Time for the Gym",
+                "title": "No Time for the Gym",
                 "description": "Busy professionals complaining they can't fit workouts into their schedule",
                 "sentiment": "High Frustration",
                 "mentions": 3421
             },
             {
-                "title": "😰 Plateaued Progress",
+                "title": "Plateaued Progress",
                 "description": "Fitness enthusiasts stuck at the same weight/strength level for months",
                 "sentiment": "Demotivation",
                 "mentions": 1876
             },
             {
-                "title": "🤕 Injury-Prone Workouts",
+                "title": "Injury-Prone Workouts",
                 "description": "People getting injured from improper form or overtraining",
                 "sentiment": "High Concern",
                 "mentions": 1342
@@ -122,19 +122,19 @@ def generate_pain_points(niche, audience):
         ],
         "productivity": [
             {
-                "title": "📧 Email Overload Killing Focus",
+                "title": "Email Overload Killing Focus",
                 "description": "Professionals drowning in unread emails and losing hours daily",
                 "sentiment": "High Stress",
                 "mentions": 4567
             },
             {
-                "title": "⏰ Meeting Fatigue",
+                "title": "Meeting Fatigue",
                 "description": "Workers complaining about back-to-back meetings with no time for actual work",
                 "sentiment": "Burnout",
                 "mentions": 3214
             },
             {
-                "title": "🔄 Switching Between Apps",
+                "title": "Switching Between Apps",
                 "description": "Context switching between 10+ tools destroying productivity",
                 "sentiment": "Medium Frustration",
                 "mentions": 2890
@@ -142,19 +142,19 @@ def generate_pain_points(niche, audience):
         ],
         "default": [
             {
-                "title": f"🎯 {audience} Struggling with Time Management",
+                "title": f"{audience} Struggling with Time Management",
                 "description": f"Members of your target audience expressing frustration about not having enough time for {niche}",
                 "sentiment": "High Frustration",
                 "mentions": random.randint(800, 2000)
             },
             {
-                "title": f"💰 Cost Concerns in {niche}",
+                "title": f"Cost Concerns in {niche}",
                 "description": f"{audience} complaining about the high cost of quality {niche} products/services",
                 "sentiment": "Price Sensitivity",
                 "mentions": random.randint(1000, 3000)
             },
             {
-                "title": f"🤔 Confusion About {niche} Options",
+                "title": f"Confusion About {niche} Options",
                 "description": f"Your audience overwhelmed by too many choices and conflicting information about {niche}",
                 "sentiment": "Decision Paralysis",
                 "mentions": random.randint(900, 2500)
