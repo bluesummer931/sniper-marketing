@@ -173,32 +173,32 @@ def generate_sniper_ad(pain_point, niche, audience):
     """Generates a targeted 'Sniper Ad' based on selected pain point"""
     ad_templates = {
         "stain": {
-            "headline": "Finally: Coffee Without the Stains ☕",
+            "headline": "Finally: Coffee Without the Stains ",
             "body": f"Tired of yellow teeth ruining your confidence? Our {niche} solution lets you enjoy your daily brew without the guilt. {audience} are already making the switch.",
             "cta": "Get Stain-Free Coffee"
         },
         "bitter": {
-            "headline": "Say Goodbye to Bitter Mornings 🌅",
+            "headline": "Say Goodbye to Bitter Mornings ",
             "body": f"Stop forcing down bitter {niche}. Our smooth blend is scientifically engineered for taste, not just caffeine. Join 10,000+ {audience} who love their mornings again.",
             "cta": "Try Smooth Coffee"
         },
         "expensive": {
-            "headline": "$5/Day? That's $1,825/Year on Coffee 💸",
+            "headline": "$5/Day? That's $1,825/Year on Coffee ",
             "body": f"Stop hemorrhaging money at coffee shops. Our premium {niche} costs just $0.50/cup. Perfect for {audience} who love quality but hate waste.",
             "cta": "Calculate Your Savings"
         },
         "time": {
-            "headline": f"Get Results in 15 Minutes/Day ⏰",
+            "headline": f"Get Results in 15 Minutes/Day ",
             "body": f"No time for {niche}? Wrong. Our system is designed for busy {audience}. Quick, effective, and proven to work.",
             "cta": "Start 15-Min Challenge"
         },
         "plateau": {
-            "headline": "Stuck? Here's Why (And How to Fix It) 📈",
+            "headline": "Stuck? Here's Why (And How to Fix It) ",
             "body": f"That plateau isn't your fault. 94% of {audience} make the same 3 mistakes. Our {niche} program breaks through in weeks, not months.",
             "cta": "Break Your Plateau"
         },
         "default": {
-            "headline": f"Built for {audience} Who Want Real Results 🎯",
+            "headline": f"Built for {audience} Who Want Real Results ",
             "body": f"Stop wasting time on generic {niche} solutions. We analyzed 10,000+ {audience} to create something that actually works for YOUR specific needs.",
             "cta": f"See How It Works"
         }
@@ -232,8 +232,8 @@ st.markdown('<h1 class="main-header">🎯 Sniper Marketing Co-Pilot</h1>', unsaf
 
 # Sidebar - The IKEA Effect Input
 with st.sidebar:
-    st.markdown("# 🎯 SNIPER MARKETING")
-    st.markdown("## 🎯 Campaign Setup")
+    st.markdown("#  SNIPER MARKETING")
+    st.markdown("##  Campaign Setup")
     st.markdown("---")
     
     product_niche = st.text_input(
@@ -269,14 +269,14 @@ with st.sidebar:
         st.metric("Avg ROI", "342%", "+23%")
     
     st.markdown("---")
-    st.markdown("### 🔗 Resources")
-    st.markdown("[📚 Documentation](https://example.com)")
-    st.markdown("[🎥 Video Tutorial](https://example.com)")
-    st.markdown("[💬 Community](https://example.com)")
+    st.markdown("###  Resources")
+    st.markdown("[ Documentation](https://example.com)")
+    st.markdown("[ Video Tutorial](https://example.com)")
+    st.markdown("[ Community](https://example.com)")
 
 # Main content area
 if st.session_state.pain_points:
-    st.markdown("## 💡 Discovered Pain Points")
+    st.markdown("##  Discovered Pain Points")
     st.markdown("**Select the pain point that best matches your campaign goals:**")
     
     # Display pain points in columns
@@ -305,7 +305,7 @@ if st.session_state.pain_points:
 # Display generated ad
 if st.session_state.generated_ad and st.session_state.selected_pain:
     st.markdown("---")
-    st.markdown("## 🎯 Your Sniper Ad")
+    st.markdown("##  Your Sniper Ad")
     
     col1, col2 = st.columns([2, 1])
     
@@ -322,14 +322,14 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
         
         # Real clickable CTA button - SMOKE TEST: Collects interest via Telegram
         st.link_button(
-            label=f"🚀 {ad['cta']}",
+            label=f" {ad['cta']}",
             url="https://forms.google.com/your-form-id",  # Replace with your actual Google Form or Telegram link
             use_container_width=True,
             type="primary"
         )
         st.caption("👆 Click to join early access waitlist")
         
-        with st.expander("📈 Ad Performance Prediction"):
+        with st.expander(" Ad Performance Prediction"):
             metric_cols = st.columns(4)
             with metric_cols[0]:
                 st.metric("Est. CTR", "4.2%", "+1.8%")
@@ -347,13 +347,13 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
             st.markdown(f"- Clear, benefit-driven CTA")
     
     with col2:
-        st.markdown("### 🎨 Ad Variations")
+        st.markdown("###  Ad Variations")
         st.info("**A/B Test Ideas:**\n- Test different headlines\n- Vary social proof numbers\n- Try urgency vs. value CTAs")
         
-        st.markdown("### 🎯 Targeting")
+        st.markdown("###  Targeting")
         st.success(f"**Audience:** {target_audience}\n**Interest:** {product_niche}\n**Pain Point:** {st.session_state.selected_pain['sentiment']}")
         
-        st.markdown("### 📱 Platforms")
+        st.markdown("###  Platforms")
         platforms = st.multiselect(
             "Deploy to:",
             ["Facebook Ads", "Google Ads", "Reddit Ads", "LinkedIn Ads", "Instagram Ads", "TikTok Ads"],
@@ -362,10 +362,10 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
 
 # Welcome Screen - Show only if no pain points generated yet
 if not st.session_state.pain_points:
-    st.info("👈 **Get started:** Enter your Product Niche and Target Audience in the sidebar, then click 'Find Pain Points'")
+    st.info(" **Get started:** Enter your Product Niche and Target Audience in the sidebar, then click 'Find Pain Points'")
     
     # Show demo metrics
-    st.markdown("## 🔥 Why Sniper Marketing?")
+    st.markdown("##  Why Sniper Marketing?")
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -382,31 +382,31 @@ if not st.session_state.pain_points:
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.markdown("### 🎯 Precision Targeting")
+        st.markdown("###  Precision Targeting")
         st.markdown("Stop wasting budget on broad audiences. Find exact pain points your audience is discussing right now.")
     
     with col2:
-        st.markdown("### 🔒 Built-in Safety")
+        st.markdown("###  Built-in Safety")
         st.markdown("Set kill switches and budget limits. Never overspend or underperform without knowing immediately.")
     
     with col3:
-        st.markdown("### ⚡ Lightning Fast")
+        st.markdown("###  Lightning Fast")
         st.markdown("From pain point discovery to live ad in under 5 minutes. No more weeks of research and testing.")
 
 # Safety Shield UI - Always shows at bottom
 st.markdown("---")
-st.markdown("## 🔒 Safety Shield - Budget Dashboard")
+st.markdown("##  Safety Shield - Budget Dashboard")
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("### 💰 Daily Budget")
+    st.markdown("###  Daily Budget")
     daily_budget = st.number_input("Set Daily Limit ($)", min_value=10, max_value=10000, value=100, step=10)
     st.progress(min(75/100, 1.0))
     st.caption(f"Spent: $75 / ${daily_budget}")
 
 with col2:
-    st.markdown("### 🔴 Kill Switch")
+    st.markdown("###  Kill Switch")
     kill_switch_metric = st.selectbox(
         "Auto-pause when:",
         ["CPA exceeds $50", "ROAS drops below 2x", "CTR below 1%", "Budget depleted"]
@@ -431,23 +431,23 @@ with st.expander("⚙️ Advanced Safety Controls"):
 
 # Feedback & Waitlist - Always shows at bottom
 st.markdown("---")
-st.markdown("## 🚀 Join the Revolution")
+st.markdown("##  Join the Revolution")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("### 💬 Give Feedback")
+    st.markdown("###  Give Feedback")
     st.markdown("Help us build the perfect marketing co-pilot")
-    if st.button("📝 Open Feedback Form", use_container_width=True, type="secondary"):
+    if st.button(" Open Feedback Form", use_container_width=True, type="secondary"):
         st.markdown("[Click here to share your thoughts](https://forms.google.com/)")
         st.balloons()
 
 with col2:
     st.markdown("### ⚡ Get Early Access")
     email = st.text_input("Enter your email", placeholder="you@company.com")
-    if st.button("🎯 Join Waitlist", use_container_width=True, type="primary"):
+    if st.button(" Join Waitlist", use_container_width=True, type="primary"):
         if email and "@" in email:
-            st.success(f"🎉 {email} added to waitlist!")
+            st.success(f" {email} added to waitlist!")
             st.snow()
         else:
             st.error("Please enter a valid email")
