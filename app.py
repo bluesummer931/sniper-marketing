@@ -414,13 +414,13 @@ with col2:
     st.markdown('<div class="warning-box">⚠️ Kill switch is ACTIVE</div>', unsafe_allow_html=True)
 
 with col3:
-    st.markdown("### 📊 Real-Time Status")
+    st.markdown("###  Real-Time Status")
     campaign_status = st.radio("Campaign Status", ["Active", "Paused", "Testing"], horizontal=True)
     if campaign_status == "Active":
         st.markdown('<div class="success-box">✅ Campaign running smoothly</div>', unsafe_allow_html=True)
 
 # Advanced controls in expander
-with st.expander("⚙️ Advanced Safety Controls"):
+with st.expander(" Advanced Safety Controls"):
     col1, col2 = st.columns(2)
     with col1:
         st.slider("Max CPA ($)", 0, 200, 50)
@@ -443,7 +443,7 @@ with col1:
         st.balloons()
 
 with col2:
-    st.markdown("### ⚡ Get Early Access")
+    st.markdown("###  Get Early Access")
     email = st.text_input("Enter your email", placeholder="you@company.com")
     if st.button(" Join Waitlist", use_container_width=True, type="primary"):
         if email and "@" in email:
