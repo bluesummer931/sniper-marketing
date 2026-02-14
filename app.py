@@ -442,28 +442,7 @@ with col1:
         st.markdown("[Click here to share your thoughts](https://forms.google.com/)")
         st.balloons()
 
-with col2:
-    st.markdown("###  Get Early Access")
-    email = st.text_input("Enter your email", placeholder="you@company.com")
-    if st.button(" Join Waitlist", use_container_width=True, type="primary"):
-        if email and "@" in email:
-            st.success(f" {email} added to waitlist!")
-            st.snow()
-        else:
-            st.error("Please enter a valid email")
-
 # Footer - Always shows at bottom
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #606060; padding: 2rem 0;">
-# --- JOIN THE REVOLUTION SECTION (CLEAN VERSION) ---
-st.divider()
-st.header("Join the Revolution")
-st.write("Help us build the perfect marketing co-pilot. Join our early access group to provide feedback and influence upcoming features.")
-
-# The single button that handles everything
-st.link_button("Join Waitlist & Give Feedback", url="https://docs.google.com/forms/d/1_hAx7VYW_oZuHtatwzgKkREgI8-6b3iiSO_BwRGRRaM/viewform")
-    <p>🎯 Sniper Marketing Co-Pilot v1.0 | Built for Precision Marketers</p>
-    <p style="font-size: 0.9rem;">Stop spraying ads everywhere. Start sniping pain points.</p>
-</div>
-""", unsafe_allow_html=True)
