@@ -442,16 +442,6 @@ with col1:
         st.markdown("[Click here to share your thoughts](https://forms.google.com/)")
         st.balloons()
 
-with col2:
-    st.markdown("### ⚡ Get Early Access")
-    email = st.text_input("Enter your email", placeholder="you@company.com")
-    if st.button("🎯 Join Waitlist", use_container_width=True, type="primary"):
-        if email and "@" in email:
-            st.success(f"🎉 {email} added to waitlist!")
-            st.snow()
-        else:
-            st.error("Please enter a valid email")
-
 # Footer - Always shows at bottom
 st.markdown("---")
 st.markdown("""
