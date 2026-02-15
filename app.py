@@ -438,9 +438,8 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("###  Give Feedback")
     st.markdown("Help us build the perfect marketing co-pilot")
-st.link_button("Give Feedback", 
-               url="https://docs.google.com/forms/d/e/1FAIpQLSe0my2LHiFP17Aqv1MBsfA6bvL_h6V_K_D7oXU6Y6W7Z-Q/viewform", 
-               use_container_width=True))
+if st.button("📝 Open Feedback Form", use_container_width=True, type="secondary"):
+        st.markdown("[Click here to share your thoughts](https://forms.google.com/)")
         st.balloons()
 
 # Footer - Always shows at bottom
