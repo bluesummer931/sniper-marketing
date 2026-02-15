@@ -322,7 +322,7 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
         
         # Real clickable CTA button - SMOKE TEST: Collects interest via Telegram
         st.link_button(
-            label=f"🚀 {ad['cta']}",
+            label=f" {ad['cta']}",
             url="https://forms.google.com/your-form-id",  # Replace with your actual Google Form or Telegram link
             use_container_width=True,
             type="primary"
@@ -357,7 +357,7 @@ if st.session_state.generated_ad and st.session_state.selected_pain:
         platforms = st.multiselect(
             "Deploy to:",
             ["Facebook Ads", "Google Ads", "Reddit Ads", "LinkedIn Ads", "Instagram Ads", "TikTok Ads"],
-            default=["Reddit Ads"]
+            default=["TikTok Ads"]
         )
 
 # Welcome Screen - Show only if no pain points generated yet
@@ -439,7 +439,7 @@ with col1:
     st.markdown("###  Give Feedback")
     st.markdown("Help us build the perfect marketing co-pilot")
     if st.button(" Open Feedback Form", use_container_width=True, type="secondary"):
-        st.markdown("[Click here to share your thoughts](https://forms.google.com/)")
+        st.markdown("[Click here to share your thoughts](https://docs.google.com/forms/d/e/1FAIpQLSe0my2LhIfP17AqvlMBsfA6bvL_h6afRb2G1VWmkFgHtnrK6g/viewform?usp=dialog")
         st.balloons()
 
 # Footer - Always shows at bottom
