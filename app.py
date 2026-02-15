@@ -269,7 +269,7 @@ with st.sidebar:
         st.metric("Avg ROI", "342%", "+23%")
     
     st.markdown("---")
-    st.markdown("### 🔗 Resources")
+    st.markdown("###  Resources")
     st.markdown("[ Documentation](https://example.com)")
     st.markdown("[ Video Tutorial](https://example.com)")
     st.markdown("[ Community](https://example.com)")
@@ -305,7 +305,7 @@ if st.session_state.pain_points:
 # Display generated ad
 if st.session_state.generated_ad and st.session_state.selected_pain:
     st.markdown("---")
-    st.markdown("## 🎯 Your Sniper Ad")
+    st.markdown("##  Your Sniper Ad")
     
     col1, col2 = st.columns([2, 1])
     
